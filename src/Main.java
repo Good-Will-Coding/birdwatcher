@@ -3,13 +3,14 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        String userInput;
-        String quit = "quit";
-        String add = "add";
-        String observation = "observation";
-        String statistics = "statistics";
-        String show = "show";
 
+        final String quit = "quit";
+        final String add = "add";
+        final String observation = "observation";
+        final String statistics = "statistics";
+        final String show = "show";
+
+        String userInput;
         String birdName;
         String latinBirdName;
 
@@ -27,15 +28,14 @@ public class Main {
                     System.out.println("Latin Name: ");
                     latinBirdName = reader.nextLine();
 
-
-
+                    database.addBird(new Bird(birdName, latinBirdName));
 
                 case observation:
                     observation();
-                case statistics:
-                    statistics();
-                case show:
-                    show();
+//                case statistics:
+//                    statistics();
+//                case show:
+//                    show();
                 case quit:
                     break;
                 default:
